@@ -139,16 +139,35 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
+<<<<<<< HEAD
     var left = positionToInteger(DODGER.style.left)
         
         function step() {
             if (left > 0) {
             DODGER.style.left = `${left -= 4}px`;
+=======
+  document.addEventListener('keydown', function(e) {
+    if (e.which === LEFT_ARROW) {
+      function move(DODGER) {
+        var left = positionToInteger(DODGER.style.left)
+        
+        function step() {
+          DODGER.style.left = `${left -= 4}px`;
+ 
+          if (left > 0) {
+            window.requestAnimationFrame(step);
+>>>>>>> 08aeac6859e464abea72f79d555c51e239a57283
             }
         }
  
         window.requestAnimationFrame(step);
       }
+<<<<<<< HEAD
+=======
+    }
+  })
+}
+>>>>>>> 08aeac6859e464abea72f79d555c51e239a57283
 
 
 function moveDodgerRight() {
@@ -156,8 +175,16 @@ function moveDodgerRight() {
         
         function step() {
             if (left < 360) {
+<<<<<<< HEAD
             DODGER.style.left = `${left += 4}px`;
             }
+=======
+            window.requestAnimationFrame(step);
+            DODGER.style.left = `${left += 4}px`;
+            }
+          
+ 
+>>>>>>> 08aeac6859e464abea72f79d555c51e239a57283
         }
  
         window.requestAnimationFrame(step);
